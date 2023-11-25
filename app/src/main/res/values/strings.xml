@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+
+    <string name="setting">Setting</string>
+    <string name="pref_splash_key">splash</string>
+    <string name="pref_sound_effect_key">sound_effect</string>
+    <string name="pref_background_music_key">background_music</string>
+    <string name="about">About</string>
+
+</resources>

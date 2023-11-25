@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:key="@string/pref_splash_key"
+        android:title="Splash screen"
+        android:summary="Display the splash screen when launching the application"
+        android:defaultValue="@bool/pref_splash_default" />
+
+    <PreferenceCategory
+        android:title="Sound">
+
+        <CheckBoxPreference
+            android:key="@string/pref_sound_effect_key"
+            android:title="Sound Effect"
+            android:summary="Play sound effect during gameplay"
+            android:defaultValue="pref_sound_effect_default" />
+        <CheckBoxPreference
+            android:key="@string/pref_background_music_key"
+            android:title="Background Music"
+            android:summary="Play background music during gameplay"
+            android:defaultValue="@bool/pref_background_music_default" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
