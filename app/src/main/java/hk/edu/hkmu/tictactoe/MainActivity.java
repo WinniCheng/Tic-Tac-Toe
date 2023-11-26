@@ -24,7 +24,7 @@ public class MainActivity extends MenuClass {
     private int playerTurn = 1;
     private int totalSelectedBoxes = 1;
     private static final String TAG = "MainActivity";
-
+private Board board;
 
     MediaPlayer mediaPlayer;
 
@@ -35,6 +35,8 @@ public class MainActivity extends MenuClass {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
+
+        board = new Board();
 
         combinationList.add(new int[] {0,1,2});
         combinationList.add(new int[] {3,4,5});
@@ -54,7 +56,7 @@ public class MainActivity extends MenuClass {
         binding.image1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(0)){
+                if (board.isBoxSelectable(0)){
                     performAction((ImageView) view, 0);
                 }
             }
@@ -63,7 +65,7 @@ public class MainActivity extends MenuClass {
         binding.image2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(1)){
+                if (board.isBoxSelectable(1)){
                     performAction((ImageView) view, 1);
                 }
             }
@@ -71,7 +73,7 @@ public class MainActivity extends MenuClass {
         binding.image3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(2)){
+                if (board.isBoxSelectable(2)){
                     performAction((ImageView) view, 2);
                 }
             }
@@ -80,7 +82,7 @@ public class MainActivity extends MenuClass {
         binding.image4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(3)){
+                if (board.isBoxSelectable(3)){
                     performAction((ImageView) view, 3);
                 }
             }
@@ -88,7 +90,7 @@ public class MainActivity extends MenuClass {
         binding.image5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(4)){
+                if (board.isBoxSelectable(4)){
                     performAction((ImageView) view, 4);
                 }
             }
@@ -96,7 +98,7 @@ public class MainActivity extends MenuClass {
         binding.image6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(5)){
+                if (board.isBoxSelectable(5)){
                     performAction((ImageView) view, 5);
                 }
             }
@@ -104,7 +106,7 @@ public class MainActivity extends MenuClass {
         binding.image7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(6)){
+                if (board.isBoxSelectable(6)){
                     performAction((ImageView) view, 6);
                 }
             }
@@ -112,7 +114,7 @@ public class MainActivity extends MenuClass {
         binding.image8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(7)){
+                if (board.isBoxSelectable(7)){
                     performAction((ImageView) view, 7);
                 }
             }
@@ -120,7 +122,7 @@ public class MainActivity extends MenuClass {
         binding.image9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBoxSelectable(8)){
+                if (board.isBoxSelectable(8)){
                     performAction((ImageView) view, 8);
                 }
             }
@@ -129,11 +131,11 @@ public class MainActivity extends MenuClass {
     }
 
     private void performAction(ImageView  imageView, int selectedBoxPosition) {
-        boxPositions[selectedBoxPosition] = playerTurn;
+        board.setBoxPosition(selectedBoxPosition, playerTurn);
 
         if (playerTurn == 1) {
             imageView.setImageResource(R.drawable.ximage);
-            if (checkResults()) {
+            if (board.checkResults()) {
                 ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerOneName.getText().toString()
                         + " is a Winner!", MainActivity.this);
                 resultDialog.setCancelable(false);
@@ -148,7 +150,7 @@ public class MainActivity extends MenuClass {
             }
         } else {
             imageView.setImageResource(R.drawable.oimage);
-            if (checkResults()) {
+            if (board.checkResults()) {
                 ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerTwoName.getText().toString()
                         + " is a Winner!", MainActivity.this);
                 resultDialog.setCancelable(false);
@@ -175,29 +177,29 @@ public class MainActivity extends MenuClass {
         }
     }
 
-    private boolean checkResults(){
-        boolean response = false;
-        for (int i = 0; i < combinationList.size(); i++){
-            final int[] combination = combinationList.get(i);
+//    private boolean checkResults(){
+//        boolean response = false;
+//        for (int i = 0; i < combinationList.size(); i++){
+//            final int[] combination = combinationList.get(i);
+//
+//            if (board.getBoxPosition(combination[0]) == playerTurn && board.getBoxPosition(combination[1]) == playerTurn &&
+//                    board.getBoxPosition(combination[2]) == playerTurn) {
+//                response = true;
+//            }
+//        }
+//        return response;
+//    }
 
-            if (boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn &&
-                    boxPositions[combination[2]] == playerTurn) {
-                response = true;
-            }
-        }
-        return response;
-    }
-
-    private boolean isBoxSelectable(int boxPosition) {
-        boolean response = false;
-        if (boxPositions[boxPosition] == 0) {
-            response = true;
-        }
-        return response;
-    }
+//    private boolean isBoxSelectable(int boxPosition) {
+//        boolean response = false;
+//        if (board.getBoxPosition(boxPosition) == 0) {
+//            response = true;
+//        }
+//        return response;
+//    }
 
     public void restartMatch(){
-        boxPositions = new int[] {0,0,0,0,0,0,0,0,0}; //9 zero
+        board.restartMatch(); //9 zero
         playerTurn = 1;
         totalSelectedBoxes = 1;
 
