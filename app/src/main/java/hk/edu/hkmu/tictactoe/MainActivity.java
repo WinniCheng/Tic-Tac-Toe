@@ -5,17 +5,15 @@ import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
-
-import androidx.preference.PreferenceManager;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.ImageView;
 
-import hk.edu.hkmu.tictactoe.databinding.ActivityMainBinding;
+import androidx.preference.PreferenceManager;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import hk.edu.hkmu.tictactoe.databinding.ActivityMainBinding;
 
 public class MainActivity extends MenuClass {
     ActivityMainBinding binding;
@@ -24,8 +22,7 @@ public class MainActivity extends MenuClass {
     private int playerTurn = 1;
     private int totalSelectedBoxes = 1;
     private static final String TAG = "MainActivity";
-private Board board;
-
+    private Board board;
     MediaPlayer mediaPlayer;
 
     @Override
@@ -37,15 +34,6 @@ private Board board;
         setContentView(binding.getRoot());
 
         board = new Board();
-
-        combinationList.add(new int[] {0,1,2});
-        combinationList.add(new int[] {3,4,5});
-        combinationList.add(new int[] {6,7,8});
-        combinationList.add(new int[] {0,3,6});
-        combinationList.add(new int[] {1,4,7});
-        combinationList.add(new int[] {2,5,8});
-        combinationList.add(new int[] {2,4,6});
-        combinationList.add(new int[] {0,4,8});
 
         String getPlayerOneName = getIntent().getStringExtra("playerOne");
         String getPlayerTwoName = getIntent().getStringExtra("playerTwo");
@@ -176,27 +164,6 @@ private Board board;
             binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
         }
     }
-
-//    private boolean checkResults(){
-//        boolean response = false;
-//        for (int i = 0; i < combinationList.size(); i++){
-//            final int[] combination = combinationList.get(i);
-//
-//            if (board.getBoxPosition(combination[0]) == playerTurn && board.getBoxPosition(combination[1]) == playerTurn &&
-//                    board.getBoxPosition(combination[2]) == playerTurn) {
-//                response = true;
-//            }
-//        }
-//        return response;
-//    }
-
-//    private boolean isBoxSelectable(int boxPosition) {
-//        boolean response = false;
-//        if (board.getBoxPosition(boxPosition) == 0) {
-//            response = true;
-//        }
-//        return response;
-//    }
 
     public void restartMatch(){
         board.restartMatch(); //9 zero
