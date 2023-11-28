@@ -126,7 +126,7 @@ public class MainActivity extends MenuClass {
         if (playerTurn == 1) {
             imageView.setImageResource(R.drawable.ximage);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is " + binding.playerOneName.getText().toString()
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The winner is " + binding.playerOneName.getText().toString()
                         + " !", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
@@ -141,7 +141,7 @@ public class MainActivity extends MenuClass {
         } else {
             imageView.setImageResource(R.drawable.oimage);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is " + binding.playerTwoName.getText().toString()
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The winner is " + binding.playerTwoName.getText().toString()
                         + " !", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
