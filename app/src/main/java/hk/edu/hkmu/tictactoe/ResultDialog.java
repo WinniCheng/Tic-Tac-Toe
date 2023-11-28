@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ public class ResultDialog extends Dialog {
 
     private final String message;
     private final MainActivity mainActivity;
+
 
     public ResultDialog(@NonNull Context context, String message, MainActivity mainActivity) {
         super(context);
@@ -28,6 +30,9 @@ public class ResultDialog extends Dialog {
 
         TextView messageText = findViewById(R.id.messageText);
         Button startAgainButton = findViewById(R.id.startAgainButton);
+        Button exitButton = findViewById(R.id.exitButton);
+
+
 
         messageText.setText(message);
 
@@ -38,5 +43,17 @@ public class ResultDialog extends Dialog {
                 dismiss();
             }
         });
+
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainActivity.restartMatch();
+                dismiss();
+                mainActivity.finishAffinity();
+
+            }
+        });
+
+
     }
 }

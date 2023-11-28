@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.preference.PreferenceManager;
@@ -30,6 +31,7 @@ public class MainActivity extends MenuClass {
         super.onCreate(savedInstanceState);
         mediaPlayer = MediaPlayer.create(this, R.raw.game_bgm);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+
 
         setContentView(binding.getRoot());
 
@@ -116,6 +118,7 @@ public class MainActivity extends MenuClass {
             }
         });
 
+
     }
 
     private void performAction(ImageView  imageView, int selectedBoxPosition) {
@@ -124,8 +127,8 @@ public class MainActivity extends MenuClass {
         if (playerTurn == 1) {
             imageView.setImageResource(R.drawable.ximage);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerOneName.getText().toString()
-                        + " is a Winner!", MainActivity.this);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is" + binding.playerOneName.getText().toString()
+                        + "!", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
@@ -139,8 +142,8 @@ public class MainActivity extends MenuClass {
         } else {
             imageView.setImageResource(R.drawable.oimage);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerTwoName.getText().toString()
-                        + " is a Winner!", MainActivity.this);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is" + binding.playerTwoName.getText().toString()
+                        + "!", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
