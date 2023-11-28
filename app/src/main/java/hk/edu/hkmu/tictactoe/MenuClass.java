@@ -26,9 +26,11 @@ public abstract class MenuClass extends AppCompatActivity {
             return true;
         } else if (itemId == R.id.about) {
             new AlertDialog.Builder(this)
-                    .setTitle("Tic-Tac-Toe Game")
+                    .setTitle("Rule of Tic-Tac-Toe")
                     .setMessage("\n" +
-                            "Tic-Tac-Toe Game is played on a grid of 3 x 3 spaces.")
+                            "The Tic-Tac-Toe game is played on a 3 x 3 grid.\n" +
+                            "Two players take turns marking Xs or Os on an empty squares. \n" +
+                            "The first player who get 3 of her marks in a row win the game. ")
                     .setNeutralButton(android.R.string.ok, null)
                     .show();
             return true;
