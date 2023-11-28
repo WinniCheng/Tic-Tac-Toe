@@ -23,12 +23,19 @@ public class MainActivity extends MenuClass {
     private int totalSelectedBoxes = 1;
     private static final String TAG = "MainActivity";
     private Board board;
+    private Resources res;
+    private SharedPreferences prefs;
     MediaPlayer mediaPlayer;
+    MediaPlayer soundEffect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mediaPlayer = MediaPlayer.create(this, R.raw.game_bgm);
+        soundEffect = MediaPlayer.create(this, R.raw.put_down);
+        res = getResources();
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
 
 
@@ -48,6 +55,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(0)){
                     performAction((ImageView) view, 0);
                 }
+                soundEffect.start();
             }
         });
 
@@ -57,6 +65,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(1)){
                     performAction((ImageView) view, 1);
                 }
+                soundEffect.start();
             }
         });
         binding.image3.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +74,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(2)){
                     performAction((ImageView) view, 2);
                 }
+                soundEffect.start();
             }
         });
 
@@ -74,6 +84,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(3)){
                     performAction((ImageView) view, 3);
                 }
+                soundEffect.start();
             }
         });
         binding.image5.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +93,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(4)){
                     performAction((ImageView) view, 4);
                 }
+                soundEffect.start();
             }
         });
         binding.image6.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +102,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(5)){
                     performAction((ImageView) view, 5);
                 }
+                soundEffect.start();
             }
         });
         binding.image7.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +111,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(6)){
                     performAction((ImageView) view, 6);
                 }
+                soundEffect.start();
             }
         });
         binding.image8.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +120,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(7)){
                     performAction((ImageView) view, 7);
                 }
+                soundEffect.start();
             }
         });
         binding.image9.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +129,7 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(8)){
                     performAction((ImageView) view, 8);
                 }
+                soundEffect.start();
             }
         });
 
@@ -186,14 +202,16 @@ public class MainActivity extends MenuClass {
     @Override
     protected void onPause() {
         super.onPause();
-        mediaPlayer.pause();
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Resources res = getResources();
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        // Retrieve and play background music
         boolean defaultValue = res.getBoolean(R.bool.pref_background_music_default);
         boolean musicOn = prefs.getBoolean(getString(R.string.pref_background_music_key), defaultValue);
         Log.i(TAG, Boolean.toString(musicOn));
@@ -201,6 +219,7 @@ public class MainActivity extends MenuClass {
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
         }
+
     }
 
 
