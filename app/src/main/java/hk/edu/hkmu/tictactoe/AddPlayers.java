@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddPlayers extends MenuClass {
@@ -22,6 +23,10 @@ public class AddPlayers extends MenuClass {
         EditText playerOne = findViewById(R.id.playerOne);
         EditText playerTwo = findViewById(R.id.playerTwo);
         Button startGameButton = findViewById(R.id.startGameButton);
+
+        TextView title = (TextView) findViewById(R.id.title);
+        Animation zoom = AnimationUtils.loadAnimation(this, R.anim.zoom);
+        title.startAnimation(zoom);
 
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override

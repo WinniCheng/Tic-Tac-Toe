@@ -6,7 +6,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.preference.PreferenceManager;
@@ -127,8 +126,8 @@ public class MainActivity extends MenuClass {
         if (playerTurn == 1) {
             imageView.setImageResource(R.drawable.ximage);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is" + binding.playerOneName.getText().toString()
-                        + "!", MainActivity.this);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is " + binding.playerOneName.getText().toString()
+                        + " !", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
@@ -142,8 +141,8 @@ public class MainActivity extends MenuClass {
         } else {
             imageView.setImageResource(R.drawable.oimage);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is" + binding.playerTwoName.getText().toString()
-                        + "!", MainActivity.this);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The Winner is " + binding.playerTwoName.getText().toString()
+                        + " !", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
@@ -160,10 +159,10 @@ public class MainActivity extends MenuClass {
     private void changePlayerTurn(int currentPlayerTurn) {
         playerTurn = currentPlayerTurn;
         if (playerTurn == 1) {
-            binding.playerOneLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerOneLayout.setBackgroundResource(R.drawable.thick_blue_border);
             binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
         } else {
-            binding.playerTwoLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerTwoLayout.setBackgroundResource(R.drawable.thick_blue_border);
             binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
         }
     }

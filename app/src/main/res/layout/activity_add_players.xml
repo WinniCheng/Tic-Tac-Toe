@@ -24,14 +24,15 @@
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
             android:padding="20dp"
-            android:background="@drawable/lavender_border">
+            android:background="@drawable/thin_blue_border">
 
             <TextView
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ENTER\nYOUR\nNAMES"
                 android:textAlignment="center"
-                android:textSize="36sp"
+                android:textSize="34sp"
                 android:textStyle="bold"
                 android:textColor="@color/wordColor"/>
 
@@ -39,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/playerOne"
-                android:background="@drawable/lavender_border"
+                android:background="@drawable/thin_blue_border"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:maxLines="1"
@@ -53,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/playerTwo"
-                android:background="@drawable/lavender_border"
+                android:background="@drawable/thin_blue_border"
                 android:layout_marginTop="15dp"
                 android:padding="8dp"
                 android:maxLines="1"

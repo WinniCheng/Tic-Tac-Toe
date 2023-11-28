@@ -43,8 +43,7 @@ public class HomeActivity extends MenuClass {
         Button exit = (Button) findViewById(R.id.exit);
         exit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                finish();
-                System.exit(0);
+                finishAffinity();
             }
         });
     }

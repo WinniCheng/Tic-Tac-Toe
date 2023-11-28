@@ -12,16 +12,17 @@
 
 
     <LinearLayout
+        android:id="@+id/showPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_above="@id/container"
+        android:layout_marginTop="10dp"
         android:layout_alignParentTop="true"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:id="@+id/playerOneLayout"
             android:orientation="vertical"
             android:gravity="center"
@@ -30,10 +31,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Player One"
                 android:id="@+id/playerOneName"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="#F4144B"
@@ -43,15 +44,15 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ximage"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:layout_marginStart="10dp"
             android:id="@+id/playerTwoLayout"
             android:orientation="vertical"
@@ -61,10 +62,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Player Two"
                 android:id="@+id/playerTwoName"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="#345DF3"
@@ -74,7 +75,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/oimage"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"/>
 
@@ -85,11 +86,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/showPlayer"
         android:id="@+id/container"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -100,7 +102,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image1"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -112,7 +114,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image2"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -124,7 +126,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image3"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -145,7 +147,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image4"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -157,7 +159,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image5"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -169,7 +171,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image6"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -190,7 +192,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image7"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
@@ -202,7 +204,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image8"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
@@ -214,7 +216,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="115dp"
+                android:layout_height="100dp"
                 android:id="@+id/image9"
                 android:layout_weight="1"
                 android:background="@drawable/white_box"
