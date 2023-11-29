@@ -55,7 +55,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(0)){
                     performAction((ImageView) view, 0);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
 
@@ -65,7 +69,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(1)){
                     performAction((ImageView) view, 1);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
         binding.image3.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +82,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(2)){
                     performAction((ImageView) view, 2);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
 
@@ -84,7 +96,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(3)){
                     performAction((ImageView) view, 3);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
         binding.image5.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +109,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(4)){
                     performAction((ImageView) view, 4);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
         binding.image6.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +122,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(5)){
                     performAction((ImageView) view, 5);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
         binding.image7.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +135,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(6)){
                     performAction((ImageView) view, 6);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
         binding.image8.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +148,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(7)){
                     performAction((ImageView) view, 7);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
         binding.image9.setOnClickListener(new View.OnClickListener() {
@@ -129,7 +161,11 @@ public class MainActivity extends MenuClass {
                 if (board.isBoxSelectable(8)){
                     performAction((ImageView) view, 8);
                 }
-                soundEffect.start();
+                boolean defaultValue = res.getBoolean(R.bool.pref_sound_effect_default);
+                boolean effectOn = prefs.getBoolean(getString(R.string.pref_sound_effect_key), defaultValue);
+                if (effectOn) {
+                    soundEffect.start();
+                }
             }
         });
 
