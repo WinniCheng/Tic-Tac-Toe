@@ -38,13 +38,16 @@ public class SplashActivity extends MenuClass {
 
         setContentView(R.layout.splash);
 
-        ImageView imageView = findViewById(R.id.splash_monster);
-        Animation animation = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.blink);
+        Animation blink = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.blink);
 
-        TextView textView = findViewById(R.id.clickTo);
+        ImageView logo = findViewById(R.id.splash_monster);
+        TextView click = findViewById(R.id.clickTo);
+        TextView title = findViewById(R.id.title);
 
-        imageView.startAnimation(animation);
-        textView.startAnimation(animation);
+        logo.startAnimation(blink);
+        click.startAnimation(blink);
+        title.startAnimation(blink);
+
 
 
     }

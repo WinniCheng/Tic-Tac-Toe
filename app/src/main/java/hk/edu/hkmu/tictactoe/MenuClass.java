@@ -28,9 +28,9 @@ public abstract class MenuClass extends AppCompatActivity {
             new AlertDialog.Builder(this)
                     .setTitle("Rule of Tic-Tac-Toe")
                     .setMessage("\n" +
-                            "The Tic-Tac-Toe game is played on a 3 x 3 grid.\n\n" +
-                            "Two players take turns marking Xs or Os on an empty squares. \n\n" +
-                            "The first player who get 3 of her marks in a row win the game. ")
+                            "The Tic-Tac-Toe game is played on 3 x 3 squares.\n\n" +
+                            "Two players take turns marking Xs or Os on empty squares. \n\n" +
+                            "The first player who gets 3 of his marks in a row wins the game. ")
                     .setNeutralButton(android.R.string.ok, null)
                     .show();
             return true;

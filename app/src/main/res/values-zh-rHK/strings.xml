@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="title">過三關</string>
     <string name="setting">設定</string>
     <string name="about">關於</string>
     <string name="click_to_start">點擊開始</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">TicTacToe</string>
 
+    <string name="title">TicTacToe</string>
     <string name="setting">Settings</string>
     <string name="pref_splash_key" translatable="false">splash</string>
     <string name="pref_sound_effect_key" translatable="false">sound_effect</string>
