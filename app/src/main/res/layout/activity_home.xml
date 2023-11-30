@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/start"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/bgColor"
@@ -31,7 +31,7 @@
 
     <Button
         android:id="@+id/setting"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/bgColor"
@@ -42,7 +42,7 @@
 
     <Button
         android:id="@+id/exit"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/bgColor"
