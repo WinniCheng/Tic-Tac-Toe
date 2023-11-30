@@ -18,11 +18,11 @@ import hk.edu.hkmu.tictactoe.databinding.ActivityMainBinding;
 public class MainActivity extends MenuClass {
     ActivityMainBinding binding;
     private final List<int[]> combinationList = new ArrayList<>();
-    private int[] boxPositions = {0,0,0,0,0,0,0,0,0}; //9 zero
+    private int[] boxPositions = {0,0,0,0,0,0,0,0,0};
     private int playerTurn = 1;
     private int totalSelectedBoxes = 1;
     private static final String TAG = "MainActivity";
-    private Board board;
+    private BoardClass board;
     private Resources res;
     private SharedPreferences prefs;
     MediaPlayer mediaPlayer;
@@ -41,13 +41,15 @@ public class MainActivity extends MenuClass {
 
         setContentView(binding.getRoot());
 
-        board = new Board();
+        board = new BoardClass();
 
         String getPlayerOneName = getIntent().getStringExtra("playerOne");
         String getPlayerTwoName = getIntent().getStringExtra("playerTwo");
 
         binding.playerOneName.setText(getPlayerOneName);
         binding.playerTwoName.setText(getPlayerTwoName);
+        binding.playerOneLayout.setBackgroundResource(R.drawable.thick_blue_border);
+        binding.playerTwoLayout.setBackgroundResource(R.drawable.game_image_box);
 
         binding.image1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,10 +214,10 @@ public class MainActivity extends MenuClass {
         playerTurn = currentPlayerTurn;
         if (playerTurn == 1) {
             binding.playerOneLayout.setBackgroundResource(R.drawable.thick_blue_border);
-            binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
+            binding.playerTwoLayout.setBackgroundResource(R.drawable.game_image_box);
         } else {
             binding.playerTwoLayout.setBackgroundResource(R.drawable.thick_blue_border);
-            binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
+            binding.playerOneLayout.setBackgroundResource(R.drawable.game_image_box);
         }
     }
 
@@ -224,15 +226,17 @@ public class MainActivity extends MenuClass {
         playerTurn = 1;
         totalSelectedBoxes = 1;
 
-        binding.image1.setImageResource(R.drawable.white_box);
-        binding.image2.setImageResource(R.drawable.white_box);
-        binding.image3.setImageResource(R.drawable.white_box);
-        binding.image4.setImageResource(R.drawable.white_box);
-        binding.image5.setImageResource(R.drawable.white_box);
-        binding.image6.setImageResource(R.drawable.white_box);
-        binding.image7.setImageResource(R.drawable.white_box);
-        binding.image8.setImageResource(R.drawable.white_box);
-        binding.image9.setImageResource(R.drawable.white_box);
+        binding.playerOneLayout.setBackgroundResource(R.drawable.thick_blue_border);
+        binding.playerTwoLayout.setBackgroundResource(R.drawable.game_image_box);
+        binding.image1.setImageResource(R.drawable.game_image_box);
+        binding.image2.setImageResource(R.drawable.game_image_box);
+        binding.image3.setImageResource(R.drawable.game_image_box);
+        binding.image4.setImageResource(R.drawable.game_image_box);
+        binding.image5.setImageResource(R.drawable.game_image_box);
+        binding.image6.setImageResource(R.drawable.game_image_box);
+        binding.image7.setImageResource(R.drawable.game_image_box);
+        binding.image8.setImageResource(R.drawable.game_image_box);
+        binding.image9.setImageResource(R.drawable.game_image_box);
     }
 
     @Override

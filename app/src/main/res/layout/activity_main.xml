@@ -26,7 +26,7 @@
             android:id="@+id/playerOneLayout"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/white_box">
+            android:background="@drawable/game_image_box">
 
             <TextView
                 android:layout_width="match_parent"
@@ -57,7 +57,7 @@
             android:id="@+id/playerTwoLayout"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/white_box">
+            android:background="@drawable/game_image_box">
 
             <TextView
                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image1"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -117,7 +117,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image2"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -129,7 +129,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image3"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -150,7 +150,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image4"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -162,7 +162,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image5"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -174,7 +174,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image6"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -195,7 +195,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image7"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -208,7 +208,7 @@
                 android:id="@+id/image8"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"
@@ -219,7 +219,7 @@
                 android:layout_height="100dp"
                 android:id="@+id/image9"
                 android:layout_weight="1"
-                android:background="@drawable/white_box"
+                android:background="@drawable/game_image_box"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="10dp"

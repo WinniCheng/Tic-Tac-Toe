@@ -7,7 +7,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 
 public class HomeActivity extends MenuClass {
@@ -26,7 +25,7 @@ public class HomeActivity extends MenuClass {
         Button start = (Button) findViewById(R.id.start);
         start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, AddPlayers.class);
+                Intent intent = new Intent(HomeActivity.this, AddPlayersActivity.class);
                 startActivity(intent);
             }
         });

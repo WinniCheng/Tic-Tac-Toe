@@ -8,14 +8,15 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/pagebkg"
-    tools:context=".AddPlayers">
+    tools:context=".AddPlayersActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:backgroundTint="#CB042B42"
-        app:cardCornerRadius="30dp"
+        android:backgroundTint="#A4042B42"
+        app:cardCornerRadius="10dp"
         app:cardElevation="20dp">
 
         <LinearLayout
@@ -44,7 +45,6 @@
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:maxLines="1"
-                android:textStyle="italic"
                 android:hint="@string/player_one_hint"
                 android:textColor="@color/wordColor"
                 android:drawableLeft="@drawable/ic_xicon"
@@ -56,9 +56,7 @@
                 android:id="@+id/playerTwo"
                 android:background="@drawable/thin_blue_border"
                 android:layout_marginTop="15dp"
-                android:padding="8dp"
                 android:maxLines="1"
-                android:textStyle="italic"
                 android:hint="@string/player_two_hint"
                 android:textColor="@color/wordColor"
                 android:drawableLeft="@drawable/ic_oicon"

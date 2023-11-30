@@ -3,13 +3,13 @@ package hk.edu.hkmu.tictactoe;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Board {
+public class BoardClass {
     private int[] boxPositions; //9 zero
     final static int PLAYER_ONE = 1;
     final static int PLAYER_TWO = 2;
     private final List<int[]> combinationList = new ArrayList<>();
 
-    public Board() {
+    public BoardClass() {
         boxPositions = new int[] {0,0,0,0,0,0,0,0,0};
         combinationList.add(new int[] {0,1,2});
         combinationList.add(new int[] {3,4,5});
