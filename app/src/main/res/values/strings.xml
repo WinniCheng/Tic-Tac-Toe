@@ -1,10 +1,29 @@
 <resources>
-    <string name="app_name">TicTacToe</string>
+    <string name="app_name" translatable="false">TicTacToe</string>
 
-    <string name="setting">Setting</string>
-    <string name="pref_splash_key">splash</string>
-    <string name="pref_sound_effect_key">sound_effect</string>
-    <string name="pref_background_music_key">background_music</string>
+    <string name="setting">Settings</string>
+    <string name="pref_splash_key" translatable="false">splash</string>
+    <string name="pref_sound_effect_key" translatable="false">sound_effect</string>
+    <string name="pref_background_music_key" translatable="false">background_music</string>
     <string name="about">About</string>
+    <string name="click_to_start">Click to start</string>
+    <string name="start_button">Start</string>
+    <string name="setting_button">Settings</string>
+    <string name="exit_button">Exit</string>
+    <string name="player_one">Player One</string>
+    <string name="player_two">Player Two</string>
+    <string name="start_again_button">Start Again</string>
+    <string name="enter_your_name">ENTER YOUR NAMES</string>
+    <string name="player_one_hint">Player1\'s name</string>
+    <string name="player_two_hint">Player2\'s name</string>
+    <string name="start_game_button">Start Game</string>
+    <string name="background_music_title">Background Music</string>
+    <string name="background_music_summary">Play background music during gameplay</string>
+    <string name="sound_effect_title">Sound Effect</string>
+    <string name="sound_effect_summary">Play sound effect during gameplay</string>
+    <string name="splash_screen_title">Splash screen</string>
+    <string name="splash_screen_summary">Display the splash screen when launching the application</string>
+    <string name="display">Display</string>
+    <string name="sound">Sound</string>
 
 </resources>

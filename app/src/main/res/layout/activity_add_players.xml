@@ -30,7 +30,7 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ENTER\nYOUR\nNAMES"
+                android:text="@string/enter_your_name"
                 android:textAlignment="center"
                 android:textSize="34sp"
                 android:textStyle="bold"
@@ -45,7 +45,7 @@
                 android:padding="8dp"
                 android:maxLines="1"
                 android:textStyle="italic"
-                android:hint="Player1's name"
+                android:hint="@string/player_one_hint"
                 android:textColor="@color/wordColor"
                 android:drawableLeft="@drawable/ic_xicon"
                 android:drawablePadding="8dp"/>
@@ -59,7 +59,7 @@
                 android:padding="8dp"
                 android:maxLines="1"
                 android:textStyle="italic"
-                android:hint="Player2's name"
+                android:hint="@string/player_two_hint"
                 android:textColor="@color/wordColor"
                 android:drawableLeft="@drawable/ic_oicon"
                 android:drawablePadding="8dp"/>
@@ -70,7 +70,7 @@
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/wordColor"
                 android:id="@+id/startGameButton"
-                android:text="Start Game"
+                android:text="@string/start_game_button"
                 android:textSize="18sp"
                 android:textColor="@color/bgColor"
                 app:cornerRadius = "20dp"/>

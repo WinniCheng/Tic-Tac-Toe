@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/bgColor"
-        android:text="Start"
+        android:text="@string/start_button"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/wordColor"/>
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/bgColor"
-        android:text="Setting"
+        android:text="@string/setting_button"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/wordColor"/>
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/bgColor"
-        android:text="Exit"
+        android:text="@string/exit_button"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/wordColor"/>
