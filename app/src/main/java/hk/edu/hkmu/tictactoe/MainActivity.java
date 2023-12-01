@@ -166,7 +166,8 @@ public class MainActivity extends MenuClass {
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
                 String winnerMessage = getString(R.string.tie_game);
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, winnerMessage, MainActivity.this);                resultDialog.setCancelable(false);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, winnerMessage, MainActivity.this);
+                resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
                 changePlayerTurn(1);
