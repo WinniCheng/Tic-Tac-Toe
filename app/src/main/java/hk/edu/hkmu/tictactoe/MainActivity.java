@@ -144,13 +144,13 @@ public class MainActivity extends MenuClass {
         if (playerTurn == 1) {
             imageView.setImageResource(R.drawable.large_x_icon);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The winner is "
-                        + binding.playerOneName.getText().toString()
-                        + " !", MainActivity.this);
+                String winnerMessage = getString(R.string.winner_message, binding.playerOneName.getText().toString());
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, winnerMessage, MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "Match Draw", MainActivity.this);
+                String winnerMessage = getString(R.string.tie_game);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, winnerMessage, MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
@@ -160,14 +160,13 @@ public class MainActivity extends MenuClass {
         } else {
             imageView.setImageResource(R.drawable.large_o_icon);
             if (board.checkResults()) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "The winner is "
-                        + binding.playerTwoName.getText().toString()
-                        + " !", MainActivity.this);
+                String winnerMessage = getString(R.string.winner_message, binding.playerTwoName.getText().toString());
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, winnerMessage, MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "Match Draw", MainActivity.this);
-                resultDialog.setCancelable(false);
+                String winnerMessage = getString(R.string.tie_game);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, winnerMessage, MainActivity.this);                resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
                 changePlayerTurn(1);

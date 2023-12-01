@@ -27,5 +27,10 @@
     <string name="splash_screen_summary">Display the splash screen when launching the application</string>
     <string name="display">Display</string>
     <string name="sound">Sound</string>
+    <string name="winner_message">The winner is %1$s！</string>
+    <string name="tie_game">Tie Game</string>
+    <string name="about_title">Rule of Tic-Tac-Toe"&#xD;"</string>
+    <string name="about_message">The Tic-Tac-Toe game is played on 3 x 3 squares. "&#xD;&#xD;"Two players take turns marking Xs or Os on empty squares. "&#xD;&#xD;"The first player who gets 3 of his marks in a row wins the game.</string>
+
 
 </resources>

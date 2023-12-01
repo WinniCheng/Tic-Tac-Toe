@@ -24,4 +24,10 @@
     <string name="splash_screen_summary">啟動應用程式時顯示啟動畫面</string>
     <string name="display">顯示</string>
     <string name="sound">聲音</string>
+    <string name="winner_message">勝利者是 %1$s！</string>
+    <string name="tie_game">平局</string>
+    <string name="about_title">過三關遊戲規則"&#xD;"</string>
+    <string name="about_message">過三關遊戲在 3 x 3 的方格上進行。 "&#xD;&#xD;"兩名玩家輪流在空白的方塊上標記 X 或 O。"&#xD;&#xD;"第一名能串連三個標記的玩家獲勝。</string>
+
+
 </resources>

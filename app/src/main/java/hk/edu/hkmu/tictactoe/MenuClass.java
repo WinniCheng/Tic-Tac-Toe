@@ -20,17 +20,16 @@ public abstract class MenuClass extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
+        String about_title = getString(R.string.about_title);
+        String about_message = getString(R.string.about_message);
         if (itemId == R.id.setting) {
             Intent intent = new Intent(this, PreferenceActivity.class);
             startActivity(intent);
             return true;
         } else if (itemId == R.id.about) {
             new AlertDialog.Builder(this)
-                    .setTitle("Rule of Tic-Tac-Toe")
-                    .setMessage("\n" +
-                            "The Tic-Tac-Toe game is played on 3 x 3 squares.\n\n" +
-                            "Two players take turns marking Xs or Os on empty squares. \n\n" +
-                            "The first player who gets 3 of his marks in a row wins the game. ")
+                    .setTitle(about_title)
+                    .setMessage(about_message)
                     .setNeutralButton(android.R.string.ok, null)
                     .show();
             return true;
