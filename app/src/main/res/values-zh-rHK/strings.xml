@@ -11,6 +11,7 @@
     <string name="player_one">玩家一</string>
     <string name="player_two">玩家二</string>
     <string name="start_again_button">重新開始</string>
+    <string name="result">結果</string>
     <string name="enter_your_name">輸入您的姓名</string>
     <string name="player_one_hint">玩家1名字</string>
     <string name="player_two_hint">玩家2名字</string>

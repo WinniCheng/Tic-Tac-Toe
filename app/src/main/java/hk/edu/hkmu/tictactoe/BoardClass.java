@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BoardClass {
-    private int[] boxPositions; //9 zero
-    final static int PLAYER_ONE = 1;
-    final static int PLAYER_TWO = 2;
+    private int[] boxPositions;
     private final List<int[]> combinationList = new ArrayList<>();
 
     public BoardClass() {
@@ -23,10 +21,6 @@ public class BoardClass {
 
     public void setBoxPosition(int selectedBoxPosition, int playerTurn) {
         boxPositions[selectedBoxPosition] = playerTurn;
-    }
-
-    public int getBoxPosition(int selectedBoxPosition) {
-        return boxPositions[selectedBoxPosition];
     }
 
     public boolean isBoxSelectable(int selectedBoxPosition) {

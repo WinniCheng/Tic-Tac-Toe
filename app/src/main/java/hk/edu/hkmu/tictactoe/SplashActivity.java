@@ -1,27 +1,21 @@
 package hk.edu.hkmu.tictactoe;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends MenuClass {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

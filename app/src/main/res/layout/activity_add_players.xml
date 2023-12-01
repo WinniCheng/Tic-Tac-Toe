@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/pagebkg"
+    android:background="@drawable/background_image"
     tools:context=".AddPlayersActivity">
 
     <androidx.cardview.widget.CardView
@@ -22,8 +22,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
             android:padding="20dp"
             android:background="@drawable/thin_blue_border">
 
@@ -38,36 +38,36 @@
                 android:textColor="@color/wordColor"/>
 
             <EditText
+                android:id="@+id/playerOne"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/playerOne"
-                android:background="@drawable/thin_blue_border"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/thin_blue_border"
                 android:padding="8dp"
                 android:maxLines="1"
                 android:hint="@string/player_one_hint"
                 android:textColor="@color/wordColor"
-                android:drawableLeft="@drawable/ic_xicon"
+                android:drawableLeft="@drawable/small_x_icon"
                 android:drawablePadding="8dp"/>
 
             <EditText
+                android:id="@+id/playerTwo"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/playerTwo"
-                android:background="@drawable/thin_blue_border"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/thin_blue_border"
                 android:maxLines="1"
                 android:hint="@string/player_two_hint"
                 android:textColor="@color/wordColor"
-                android:drawableLeft="@drawable/ic_oicon"
+                android:drawableLeft="@drawable/small_o_icon"
                 android:drawablePadding="8dp"/>
 
             <Button
+                android:id="@+id/startGameButton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/wordColor"
-                android:id="@+id/startGameButton"
                 android:text="@string/start_game_button"
                 android:textSize="18sp"
                 android:textColor="@color/bgColor"
